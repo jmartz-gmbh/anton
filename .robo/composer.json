@@ -1,0 +1,12 @@
+{
+    "name": "jmartz-gmbh/anton",
+    "require": {
+        "jmartz-gmbh/robo-config": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:jmartz-gmbh/robo-config.git"
+        }
+    ]
+}
