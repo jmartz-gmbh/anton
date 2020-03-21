@@ -1,0 +1,14 @@
+{
+    "name": "jmartz-gmbh/anton-cli",
+    "description": "Anton Build Server",
+    "type": "project",
+    "license": "MIT",
+    "authors": [{
+        "name": "Jonathan Martz",
+        "email": "anton@jmartz.gmbh",
+        "homepage": "https://www.jmartz.de/"
+    }],
+    "require": {
+        "ext-json": "*"
+    }
+}
