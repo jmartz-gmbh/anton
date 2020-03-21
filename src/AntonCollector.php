@@ -1,28 +1,8 @@
 <?php
 namespace JmartzGmbH;
 
-class Anton
+class AntonCollector
 {
-    public function __constructor()
-    {
-        $this->initLog();
-    }
-
-    public function initLog()
-    {
-
-    }
-
-    public function addLogMessage()
-    {
-        
-    }
-
-    public function saveResult()
-    {
-        
-    }
-
     public function getLog(string $project, string $name)
     {
         $configFolder = 'projects';

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-php scripts/collect.php
+php src/collect.php
