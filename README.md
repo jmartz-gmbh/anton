@@ -1,13 +1,9 @@
 #### Anton Build Server
 
-##### Todo
-* install 
-* github trigger push
+##### Description
+This is a simple Build Server which is my replacement for Jenkins with Robo
 
-# install robo
-# install phan
-# install yarn
-# install composer
-# everything run in ? (src)
-# build trigger github/cronjob/mail ?
-# test with php unit
+##### Todo
+* initial setup with cli trigger
+* add frontend with boilerplate
+* lumen api to trigger build via webhook

@@ -1,17 +1,10 @@
 #!/bin/bash
 
-# git clone
-# generate config based on branch
-robo generate:production-config
+# get all projects
+# load config
+# load steps
 
-# composer install
-# yarn install
-# cypress tests
-# phan tests
-# unit tests
-# tests php rate
-# copy to server
-# publish
-
-
-# run repo steps
+# trigger build by name and branch
+# create tmp folder
+# run steps
+# finsih (notify email, jira comment ?)
