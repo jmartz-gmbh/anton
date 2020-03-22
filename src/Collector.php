@@ -1,12 +1,11 @@
 <?php
-namespace JmartzGmbH;
+namespace Anton;
 
-class AntonCollector
+class Collector
 {
     public function getLog(string $project, string $name)
     {
-        $configFolder = 'projects';
-        $filename = $configFolder. '/tmp/'.$project.'/' . $name . '.log';
+        $filename = $this->folders['config']. '/tmp/'.$project.'/' . $name . '.log';
         if (file_exists($filename)) {
             $log = file_get_contents($filename);
             $log = trim($log);
@@ -20,8 +19,7 @@ class AntonCollector
 
     public function getProjectConfig(string $name, string $type)
     {
-        $configFolder = 'projects';
-        $filename = $configFolder. '/tmp/' .$name. '/.anton/'.$type.'.json';
+        $filename = $this->folders['config']. '/tmp/' .$name. '/.anton/'.$type.'.json';
         if (file_exists($filename)) {
             $file = file_get_contents($filename);
             $pipelines = (array) json_decode($file, true);
@@ -34,8 +32,7 @@ class AntonCollector
 
     public function getConfig(string $name)
     {
-        $configFolder = 'projects';
-        $filename = $configFolder. '/' . $name . '.json';
+        $filename = $this->folders['config']. '/' . $name . '.json';
         if (file_exists($filename)) {
             $file = file_get_contents($filename);
             return json_decode($file, true);
@@ -45,8 +42,8 @@ class AntonCollector
     }
 
     public function cloneProjectRepo(string $project,array $tmp){
-        $folder = 'projects/tmp/'.$project;
-        $goDir = 'cd projects/tmp';
+        $folder = $this->folders['config'].'/tmp/'.$project;
+        $goDir = 'cd '.$this->folders['config'].'/tmp';
         $cloneRepo = 'git clone '.$tmp['config']['repo'];
 
         if (!file_exists($folder) && !is_dir($folder)) {
@@ -55,13 +52,17 @@ class AntonCollector
     }
 
     public $folders = [
-        'config' => 'projects'
+        'config' => 'workspace'
+    ];
+
+    public $filename = [
+        'config' => 'config'
     ];
 
     public function run()
     {
         try{
-            $projects = $this->getJsonFileArray('projects/config.json');
+            $projects = $this->getJsonFileArray($this->folders['config'].'/config.json');
             if ($projects) {
                 foreach ($projects as $key => $project) {
                     $tmp = $this->generateTmpConfig($project);

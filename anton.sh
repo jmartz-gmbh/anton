@@ -1,3 +1,3 @@
 #!/bin/bash
 
-php src/collect.php
+php src/run.php $@
