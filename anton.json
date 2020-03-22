@@ -1,1 +1,19 @@
-{"ms-tracking":{"project":{"name":"Ms Tracking","repo":"git@github.com:jmartz-gmbh/ms-tracking.git"},"pipelines":{"production":"master"},"servers":[{"domain":"ms-tracking.jmartz.gmbh","user":"root","folder":"/var/www"}],"steps":["robo generate:production-config"]}}
+{
+    "ms-tracking": {
+        "project": {
+            "name": "Ms Tracking",
+            "repo": "git@github.com:jmartz-gmbh/ms-tracking.git"
+        },
+        "pipelines": {
+            "production": "master"
+        },
+        "servers": [{
+            "domain": "ms-tracking.jmartz.gmbh",
+            "user": "root",
+            "folder": "/var/www"
+        }],
+        "steps": [
+            "robo generate:production-config"
+        ]
+    }
+}

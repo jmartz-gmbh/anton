@@ -5,7 +5,7 @@ class Collector
 {
     public function getLog(string $project, string $name)
     {
-        $filename = $this->folders['config']. '/tmp/'.$project.'/' . $name . '.log';
+        $filename = $this->folders['config']. '/'.$this->folders['tmp'].'/'.$project.'/' . $name . '.log';
         if (file_exists($filename)) {
             $log = file_get_contents($filename);
             $log = trim($log);
@@ -19,7 +19,7 @@ class Collector
 
     public function getProjectConfig(string $name, string $type)
     {
-        $filename = $this->folders['config']. '/tmp/' .$name. '/.anton/'.$type.'.json';
+        $filename = $this->folders['config']. '/'.$this->folders['tmp'].'/' .$name. '/.anton/'.$type.'.json';
         if (file_exists($filename)) {
             $file = file_get_contents($filename);
             $pipelines = (array) json_decode($file, true);
@@ -32,18 +32,22 @@ class Collector
 
     public function getConfig(string $name)
     {
-        $filename = $this->folders['config']. '/' . $name . '.json';
+        $filename = $this->folders['config']. '/projects.json';
         if (file_exists($filename)) {
             $file = file_get_contents($filename);
-            return json_decode($file, true);
+            $data = json_decode($file, true);
+
+            if(!empty($data[$name])){
+                return $data[$name];
+            }
         }
     
         return [];
     }
 
     public function cloneProjectRepo(string $project,array $tmp){
-        $folder = $this->folders['config'].'/tmp/'.$project;
-        $goDir = 'cd '.$this->folders['config'].'/tmp';
+        $folder = $this->folders['config'].'/'.$this->folders['tmp'].'/'.$project;
+        $goDir = 'cd '.$this->folders['config'].'/'.$this->folders['tmp'];
         $cloneRepo = 'git clone '.$tmp['config']['repo'];
 
         if (!file_exists($folder) && !is_dir($folder)) {
@@ -52,7 +56,8 @@ class Collector
     }
 
     public $folders = [
-        'config' => 'workspace'
+        'config' => 'workspace',
+        'tmp' => 'projects'
     ];
 
     public $filename = [
@@ -67,9 +72,9 @@ class Collector
                 foreach ($projects as $key => $project) {
                     $tmp = $this->generateTmpConfig($project);
                     $this->cloneProjectRepo($project, $tmp);
-                    $config = $this->getJsonFileArray($this->folders['config']. '/' . $project .'.json');
-                    if ($config) {    
-                        $anton[$project] = $this->generateProjectConfig($project,$config);
+                    $config = $this->getJsonFileArray($this->folders['config']. '/projects.json');
+                    if ($config[$project]) {    
+                        $anton[$project] = $this->generateProjectConfig($project,$config[$project]);
                     }
                 }
             }
