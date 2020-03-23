@@ -9,9 +9,7 @@ if(count($argv) == 2 && $argv[1] == 'collect'){
 }
 elseif(count($argv) == 4 && $argv[1] == 'trigger'){
     $trigger = new \Anton\Trigger();
-    $trigger->setProject($argv[2]);
-    $trigger->setBranch($argv[3]);
-    $trigger->run();
+    $trigger->run($argv[2],$argv[3]);
 }
 else{
     echo 'Anton Help. usage:'.PHP_EOL;

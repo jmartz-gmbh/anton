@@ -7,13 +7,15 @@
         "pipelines": {
             "production": "master"
         },
-        "servers": [{
-            "domain": "ms-tracking.jmartz.gmbh",
-            "user": "root",
-            "folder": "/var/www"
-        }],
+        "servers": [
+            {
+                "domain": "ms-tracking.jmartz.gmbh",
+                "user": "root",
+                "folder": "/var/www"
+            }
+        ],
         "steps": [
-            "robo generate:production-config"
+            "generate:config-production"
         ]
     }
 }
