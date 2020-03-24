@@ -12,6 +12,8 @@ class Trigger {
     public function run(string $project, string $pipeline){
         $filename = 'anton.json';
 
+        // @todo add build log
+
         try {
             if(file_exists($filename)){
                 $file = file_get_contents($filename);
@@ -26,6 +28,7 @@ class Trigger {
                             $branch = $projectConfig['pipelines'][$pipeline];   
                             exec('cd '.$workdir.' && git checkout '.$branch);
         
+                            // @todo add commits to log file for builds
                             $commits = exec('cd '.$workdir.' && git rev-list --count '.$branch);
                             exec('cd '.$workdir.' && git pull');
         
@@ -36,10 +39,10 @@ class Trigger {
                                     exec('cd '.$workdir.' && mkdir -p .anton/log');
                                     foreach($projectConfig['steps'] as $key => $value){
                                         // @todo use step key for logile
-                                        // @todo add step name
                                         $steps[$key] = [];
                                         $steps[$key]['log'] = [];
-                                        $logfile = '.anton/log/'.$key.'.log';                    
+                                        $logfile = '.anton/log/'.$key.'.log';
+                                        // @todo different steps by branch? robo detect branch ?              
                                         exec('cd '.$workdir.' && robo '.$value . ' 2>&1 | tee '.$logfile);
                                         
                                         $steps[$key]['log']['exists'] = file_exists($workdir.'/'.$logfile);
@@ -69,7 +72,6 @@ class Trigger {
                                 die($e->getMessage());
                             }
                             
-                            // check if success
                             exec('cd '.$workdir.' && robo check:build 2>&1 | tee .anton/log/check.log');
         
                             $check = file_get_contents($workdir. '/.anton/log/check.log');

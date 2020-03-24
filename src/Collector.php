@@ -53,10 +53,15 @@ class Collector
     public function cloneProjectRepo(string $project,array $tmp){
         $folder = $this->folders['config'].'/'.$this->folders['tmp'].'/'.$project;
         $goDir = 'cd '.$this->folders['config'].'/'.$this->folders['tmp'];
-        $cloneRepo = 'git clone '.$tmp['config']['repo'];
+        $cloneRepo = 'git clone '.$tmp['repo'];
 
-        if (!file_exists($folder) && !is_dir($folder)) {
-            exec($goDir . ' && ' . $cloneRepo . ' 2>&1 | tee '. $tmp['name'] .'/config.log');
+        if(!file_exists($folder)) {
+            exec($goDir . ' && ' . $cloneRepo);
+        }
+        else{
+            if(!is_dir($folder)){
+                echo 'Warning: Project repo shouldnt be a file.';
+            }
         }
     }
 
@@ -72,15 +77,20 @@ class Collector
     public function run()
     {
         try{
-            $projects = $this->getJsonFileArray($this->folders['config'].'/config.json');
+            $projects = $this->getJsonFileArray($this->folders['config'].'/projects.json');
             if ($projects) {
                 foreach ($projects as $key => $project) {
-                    $tmp = $this->generateTmpConfig($project);
-                    $this->cloneProjectRepo($project, $tmp);
-                    $config = $this->getJsonFileArray($this->folders['config']. '/projects.json');
-                    if ($config[$project]) {    
-                        $anton[$project] = $this->generateProjectConfig($project,$config[$project]);
-                    }
+                    $tmp = $this->getJsonFileArray($this->folders['config']. '/projects.json');
+                    $this->cloneProjectRepo($key, $tmp[$key]);
+                    
+                    $projectConfig = $this->getJsonFileArray($this->folders['config']. '/projects/'.$key.'/.anton/config.json');
+
+                    $config['project'] = $tmp[$key];
+                    $config['pipelines'] = $projectConfig['pipelines'];
+                    $config['servers'] = $projectConfig['servers'];
+                    $config['steps'] = $projectConfig['steps'];
+                    
+                    $anton[$key] = $config;
                 }
             }
 
@@ -97,14 +107,6 @@ class Collector
         }
     }
 
-    public function generateTmpConfig(string $project){
-        $tmp = [];
-        $tmp['name'] = $project;
-        $tmp['config'] = $this->getConfig($project);
-
-        return $tmp;
-    }
-
     public function somethingWentWrong(){
         echo 'something went wrong';
     }
@@ -118,15 +120,14 @@ class Collector
         return false;
     }
 
-    public function generateProjectConfig(string $project, array $config){
-        // @todo merge configs together in one file
-        $data = [];
-        $data['project'] = $config;
-        $data['pipelines'] = $this->getProjectConfig($project, 'pipelines');
-        $data['servers'] = $this->getProjectConfig($project, 'servers');
-        $data['steps'] = $this->getProjectConfig($project, 'steps');
-
-        return $data;
+    public function loadProjectConfig(string $project){
+        $filename = 'workspace/projects/'.$project.'/.anton/config.json';
+        if (file_exists($filename)) {
+            $file = file_get_contents($filename);
+            $config = (array) json_decode($file, true);
+            return $config;
+        }
+        return false;
     }
 
     public function saveAntonConfig(array $anton){
