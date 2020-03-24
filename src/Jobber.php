@@ -5,6 +5,12 @@ class Jobber {
 
     public function run(){
         // trigger new jobs
+
+        $filename = 'storage/jobber.json';
+        if(!file_exists($filename)){
+            file_put_contents('[]');
+        }
+
         $jobs = $this->getJobs();
 
         if(count($jobs) > 0){
