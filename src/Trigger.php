@@ -35,6 +35,8 @@ class Trigger {
                                 if(count($projectConfig['steps']) > 0){
                                     exec('cd '.$workdir.' && mkdir -p .anton/log');
                                     foreach($projectConfig['steps'] as $key => $value){
+                                        // @todo use step key for logile
+                                        // @todo add step name
                                         $steps[$key] = [];
                                         $steps[$key]['log'] = [];
                                         $logfile = '.anton/log/'.$key.'.log';                    
@@ -73,7 +75,6 @@ class Trigger {
                             $check = file_get_contents($workdir. '/.anton/log/check.log');
                             
                             if($check === 'success'){
-                                exec('cd '.$workdir.' && rm -rf .anton/log');
                                 exec('rm -rf '.$workdir);
                             }
                             else{

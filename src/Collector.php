@@ -1,8 +1,13 @@
 <?php
 namespace Anton;
+include('Validator.php');
 
 class Collector
 {
+    public function __construct(){
+        $this->validator = new \Anton\Validator();
+    }
+
     public function getLog(string $project, string $name)
     {
         $filename = $this->folders['config']. '/'.$this->folders['tmp'].'/'.$project.'/' . $name . '.log';
@@ -78,10 +83,17 @@ class Collector
                     }
                 }
             }
-    
-            $this->saveAntonConfig($anton);
+
+            $save = $this->saveAntonConfig($anton);
+            if(!$save){
+                echo 'Collect Data Successfull.'.PHP_EOL;
+            }
+            else{
+                echo 'Collect Data Failed.'.PHP_EOL;
+            }
         } catch (\Exception $e){
             $this->somethingWentWrong();
+            echo 'Collect Data Failed.'.PHP_EOL;
         }
     }
 
@@ -107,6 +119,7 @@ class Collector
     }
 
     public function generateProjectConfig(string $project, array $config){
+        // @todo merge configs together in one file
         $data = [];
         $data['project'] = $config;
         $data['pipelines'] = $this->getProjectConfig($project, 'pipelines');
@@ -117,6 +130,12 @@ class Collector
     }
 
     public function saveAntonConfig(array $anton){
-        file_put_contents('anton.json', json_encode($anton, JSON_UNESCAPED_SLASHES));
+        $this->validator->validate($anton);
+        if(!$this->validator->hasErrors()){
+            file_put_contents('anton.json', json_encode($anton, JSON_UNESCAPED_SLASHES));
+            return false;
+        }
+
+        return true;
     }
 }
