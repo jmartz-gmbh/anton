@@ -3,7 +3,7 @@
 namespace Anton;
 
 class Validator {
-    
+
     public $error = [];
 
     public $cache = [
@@ -93,7 +93,6 @@ class Validator {
 
     public function validateSteps(array $data){
         foreach ($data as $key => $value) {
-            // @todo is name and key unique ?
             if(empty($value['name'])){
                 $this->addError('Step '.$key. ' atrribute name missing.');
             }
@@ -107,7 +106,9 @@ class Validator {
                 $this->addError('Step '.$key. ' atrribute identifier missing.');
             }
 
-            $this->cache['step']['name'][$value['name']] = true;
+            if(!empty($value['name'])){
+                $this->cache['step']['name'][$value['name']] = true;
+            }
         }
 
         return $this->hasErrors();
