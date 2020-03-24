@@ -3,7 +3,14 @@
 namespace Anton;
 
 class Validator {
+    
     public $error = [];
+
+    public $cache = [
+        'step' => [
+            'name' => []
+        ]
+    ];
 
     public function validate(array $configs){
         foreach ($configs as $key => $config) {
@@ -32,22 +39,26 @@ class Validator {
 
     public function validateProject(array $data){
         if(empty($data['name'])){
-            // @todo check access to server ?
             $this->addError('Project has no name.');
         }
         else{
             if($this->hasDots($data['name'])){
-                // @todo is git repo
                 $this->addError('Project name has no dots.');
             }
         }
 
         if(empty($data['repo'])){
-            // @todo is git repo
             $this->addError('Project has no repo.');
+        }
+        else if($this->isGitRepo($data['repo'])){
+            $this->addError('Repo isnt a git repo for ssh.');
         }
 
         return $this->hasErrors();
+    }
+
+    public function isGitRepo(string $url){
+        return !!strpos('git@', $url);
     }
 
     public function validateServers(array $data){
@@ -86,12 +97,17 @@ class Validator {
             if(empty($value['name'])){
                 $this->addError('Step '.$key. ' atrribute name missing.');
             }
-            else if(empty($value['command'])){
+            else if(!empty($this->cache['step']['name'][$value['name']])){
+                $this->addError('Step name '.$value['name']. ' already in use.');
+            }
+            if(empty($value['command'])){
                 $this->addError('Step '.$key. ' atrribute command missing.');
             }
-            else if(empty($value['identifier'])){
+            if(empty($value['identifier'])){
                 $this->addError('Step '.$key. ' atrribute identifier missing.');
             }
+
+            $this->cache['step']['name'][$value['name']] = true;
         }
 
         return $this->hasErrors();
