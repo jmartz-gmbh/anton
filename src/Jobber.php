@@ -8,7 +8,7 @@ class Jobber {
 
         $filename = 'storage/jobber.json';
         if(!file_exists($filename)){
-            file_put_contents('[]');
+            file_put_contents($filename, '[]');
         }
 
         $jobs = $this->getJobs();
