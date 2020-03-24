@@ -4,14 +4,39 @@ namespace Anton;
 
 class Trigger {
     public $project = '';
+    public $pipeline = '';
 
-    public $branch = '';
+    public $build = [
+        'status' => 'failed',
+        'number' => null
+    ];
 
-    public $build = 'failed';
+    public $log = [
+        'items' => []
+    ];
+
+    public function addLog(string $message){
+        $filename = 'storage/builds/'.$this->project.'.log';
+        
+        if($this->build['number'] === null){
+            // @todo create build item
+        }
+
+        $this->log['items'][] = $message;
+        $this->saveBuildLog();
+    }
+
+    public function saveBuildLog(){
+        // @todo get build log
+        // @todo update item
+
+
+        // @bug? 2 jobs edit log at same time, lock file ?
+        file_put_contents('storage/builds/'.$this->project.'.log', \json_encode($this->log));
+    }
 
     public function run(string $project, string $pipeline){
         $filename = 'storage/anton.json';
-
         // @todo add build log
 
         try {
@@ -25,6 +50,10 @@ class Trigger {
 
                     if(file_exists($workdir) && is_dir($workdir)){
                         if(!empty($projectConfig['pipelines'][$pipeline])){
+                            $this->project = $project;
+                            $this->pipeline = $pipeline;
+                            $this->addLog('Build started '.time());
+
                             $branch = $projectConfig['pipelines'][$pipeline];   
                             exec('cd '.$workdir.' && git checkout '.$branch. ' 2>&1');
         

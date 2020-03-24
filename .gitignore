@@ -3,3 +3,4 @@ workspace/projects/*
 /storage/anton.json
 /storage/jobber.json
 /storage/builds/*.json
+/storage/builds/*.log
