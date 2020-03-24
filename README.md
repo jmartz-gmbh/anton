@@ -12,12 +12,9 @@ Only people in your network should have access to this server.
 If you need to work from outside of your company buiding, use a vpn to access the network.
 
 ##### Todo
-* validate config in Collector
 * log errors and result in a build history
-* create logic to trigger builds by queue.json
 * move stuff into phar file
 * use composer to load stuff
-* move stuff into modules
 
 ##### Later
 * add frontend with boilerplate
@@ -30,4 +27,4 @@ If you need to work from outside of your company buiding, use a vpn to access th
 ##### Classes
 Trigger - Class to trigger a build with project name and pipeline name
 Collector - Class to collect all projects and prepare workspace
-Queue - Class to trigger builds by queue.json
+Jobber - Class to trigger builds by storage/jobber.json
