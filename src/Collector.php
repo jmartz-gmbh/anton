@@ -56,7 +56,7 @@ class Collector
         $cloneRepo = 'git clone '.$tmp['repo'];
 
         if(!file_exists($folder)) {
-            exec($goDir . ' && ' . $cloneRepo);
+            exec($goDir . ' && ' . $cloneRepo. ' 2>&1');
         }
         else{
             if(!is_dir($folder)){
@@ -80,6 +80,8 @@ class Collector
             $projects = $this->getJsonFileArray($this->folders['config'].'/projects.json');
             if ($projects) {
                 foreach ($projects as $key => $project) {
+                    exec('mkdir -p storage/logs/'.$key);
+
                     $tmp = $this->getJsonFileArray($this->folders['config']. '/projects.json');
                     $this->cloneProjectRepo($key, $tmp[$key]);
                     
@@ -133,7 +135,7 @@ class Collector
     public function saveAntonConfig(array $anton){
         $this->validator->validate($anton);
         if(!$this->validator->hasErrors()){
-            file_put_contents('anton.json', json_encode($anton, JSON_UNESCAPED_SLASHES));
+            file_put_contents('storage/anton.json', json_encode($anton, JSON_UNESCAPED_SLASHES));
             return false;
         }
 

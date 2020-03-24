@@ -10,7 +10,7 @@ class Trigger {
     public $build = 'failed';
 
     public function run(string $project, string $pipeline){
-        $filename = 'anton.json';
+        $filename = 'storage/anton.json';
 
         // @todo add build log
 
@@ -22,28 +22,29 @@ class Trigger {
                 if(!empty($config[$project])){
                     $projectConfig = $config[$project];
                     $workdir = 'workspace/projects/'.$project;
-    
+
                     if(file_exists($workdir) && is_dir($workdir)){
                         if(!empty($projectConfig['pipelines'][$pipeline])){
                             $branch = $projectConfig['pipelines'][$pipeline];   
-                            exec('cd '.$workdir.' && git checkout '.$branch);
+                            exec('cd '.$workdir.' && git checkout '.$branch. ' 2>&1');
         
                             // @todo add commits to log file for builds
                             $commits = exec('cd '.$workdir.' && git rev-list --count '.$branch);
-                            exec('cd '.$workdir.' && git pull');
+                            exec('cd '.$workdir.' && git pull'. ' 2>&1');
         
                             $steps = [];
+                            $logfolder = 'storage/logs/'.$project;
+                            exec('mkdir -p '.$logfolder);
         
                             try {
                                 if(count($projectConfig['steps']) > 0){
-                                    exec('cd '.$workdir.' && mkdir -p .anton/log');
-                                    foreach($projectConfig['steps'] as $key => $value){
+                                     foreach($projectConfig['steps'] as $key => $value){
                                         // @todo use step key for logile
                                         $steps[$key] = [];
                                         $steps[$key]['log'] = [];
-                                        $logfile = '.anton/log/'.$key.'.log';
+                                        $logfile = '../../../'.$logfolder.'/'.$key.'.log';
                                         // @todo different steps by branch? robo detect branch ?              
-                                        exec('cd '.$workdir.' && robo '.$value . ' 2>&1 | tee '.$logfile);
+                                        exec('cd '.$workdir.' && robo '.$value['command'] . ' 2>&1 | tee '.$logfile);
                                         
                                         $steps[$key]['log']['exists'] = file_exists($workdir.'/'.$logfile);
                         
@@ -65,6 +66,8 @@ class Trigger {
                                         else{
                                             throw new \Exception('Log not created. ('.$workdir.'/'.$logfile.')');
                                         }
+
+                                        // @todo save step log
                                     }
                                 }
                             }
@@ -72,15 +75,18 @@ class Trigger {
                                 die($e->getMessage());
                             }
                             
-                            exec('cd '.$workdir.' && robo check:build 2>&1 | tee .anton/log/check.log');
+                            exec('cd '.$workdir.' && robo check:build 2>&1 | tee ../../../storage/logs/'.$project.'/status.log');
         
-                            $check = file_get_contents($workdir. '/.anton/log/check.log');
+                            $check = file_get_contents($logfolder.'/status.log');
+
+                            $check = trim(trim($check, PHP_EOL));
                             
-                            if($check === 'success'){
-                                exec('rm -rf '.$workdir);
+                            if($check !== 'success'){
+                                throw new \Exception('Step failed. ('.$key.')');
                             }
                             else{
-                                throw new \Exception('Step failed. ('.$key.')');
+                                // @todo mark build as success
+                                exec('rm -rf storage/logs/'.$project);
                             }
                         }
                         else{
@@ -88,7 +94,7 @@ class Trigger {
                         }
                     }
                     else{
-                        throw new \Exception('Workdir doesnt exits.');
+                        throw new \Exception('Workdir doesnt exists.'.PHP_EOL);
                     }
                 }
                 else{
@@ -100,7 +106,7 @@ class Trigger {
             }
 
             $this->build = 'success';
-            echo 'Build successfull';
+            echo 'Build successfull.'.PHP_EOL.PHP_EOL;
             
         } catch(\Exception $e){
             echo $e->getMessage().PHP_EOL;

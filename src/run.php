@@ -2,9 +2,14 @@
 
 include('Trigger.php');
 include('Collector.php');
+include('Jobber.php');
 
 if(count($argv) == 2 && $argv[1] == 'collect'){
     $collector = new \Anton\Collector();
+    $collector->run();
+}
+elseif(count($argv) == 2 && $argv[1] == 'jobber'){
+    $collector = new \Anton\Jobber();
     $collector->run();
 }
 elseif(count($argv) == 4 && $argv[1] == 'trigger'){
