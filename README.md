@@ -15,6 +15,9 @@ If you need to work from outside of your company buiding, use a vpn to access th
 * validate config in Collector
 * log errors and result in a build history
 * create logic to trigger builds by queue.json
+* move stuff into phar file
+* use composer to load stuff
+* move stuff into modules
 
 ##### Later
 * add frontend with boilerplate
