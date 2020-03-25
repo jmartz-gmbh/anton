@@ -1,6 +1,7 @@
 <?php
 
-include('Trigger.php');
+include('Build.php');
+include('Helper.php');
 include('Collector.php');
 include('Jobber.php');
 
@@ -13,8 +14,8 @@ elseif(count($argv) == 2 && $argv[1] == 'jobber'){
     $collector->run();
 }
 elseif(count($argv) == 4 && $argv[1] == 'trigger'){
-    $trigger = new \Anton\Trigger();
-    $trigger->run($argv[2],$argv[3]);
+    $trigger = new \Anton\Build($argv[2],$argv[3]);
+    $trigger->run();
 }
 else{
     echo 'Anton Help. usage:'.PHP_EOL;

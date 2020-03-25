@@ -16,7 +16,7 @@ If you need to work from outside of your company buiding, use a vpn to access th
 * move stuff into phar file
 * use composer to load stuff
 
-##### Later
+##### Nice to Have later
 * add frontend with boilerplate
 * lumen api to trigger build via webhook
 * notify email

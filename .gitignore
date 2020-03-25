@@ -1,5 +1,6 @@
 .robo/vendor
 workspace/projects/*
+/storage/logs/*
 /storage/anton.json
 /storage/jobber.json
 /storage/builds/*.json
