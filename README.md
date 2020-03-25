@@ -14,17 +14,11 @@ If you need to work from outside of your company buiding, use a vpn to access th
 ##### Todo
 * log errors and result in a build history
 * move stuff into phar file
-* use composer to load stuff
 
-##### Nice to Have later
-* add frontend with boilerplate
-* lumen api to trigger build via webhook
-* notify email
-* notify slack
-* notify nova ?
-* lumen only read access
+##### Backend
+* notify (email, slack, webhook)
+* trigger build via github webhook on push
+* no direct access
 
-##### Classes
-Trigger - Class to trigger a build with project name and pipeline name
-Collector - Class to collect all projects and prepare workspace
-Jobber - Class to trigger builds by storage/jobber.json
+##### Frontend
+* add frontend based on boilerplate
