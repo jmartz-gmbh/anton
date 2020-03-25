@@ -11,6 +11,16 @@ For Security reasons i would highly recommend you to run this server not public.
 Only people in your network should have access to this server.
 If you need to work from outside of your company buiding, use a vpn to access the network.
 
+##### Setup
+```
+composer install
+```
+
+Now your ready to go.
+```
+./anton.sh
+```
+
 ##### Todo
 * log errors and result in a build history
 * move stuff into phar file
