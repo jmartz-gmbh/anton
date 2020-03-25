@@ -1,0 +1,250 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b95ee86325b43a97e5bba11d5b645846",
+    "packages": [
+        {
+            "name": "jmartz-gmbh/anton-build",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmartz-gmbh/anton-build.git",
+                "reference": "64c823a44d9d0109ee473e334343411a4740f109"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/64c823a44d9d0109ee473e334343411a4740f109",
+                "reference": "64c823a44d9d0109ee473e334343411a4740f109",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "anton-module",
+            "autoload": {
+                "psr-4": {
+                    "Anton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Martz",
+                    "email": "anton@jmartz.gmbh",
+                    "homepage": "https://www.jmartz.de/"
+                }
+            ],
+            "description": "Anton Build",
+            "time": "2020-03-25T20:54:05+00:00"
+        },
+        {
+            "name": "jmartz-gmbh/anton-collector",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmartz-gmbh/anton-collector.git",
+                "reference": "8bafbb06966e2097c041dfa856277225169f5486"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-collector/zipball/8bafbb06966e2097c041dfa856277225169f5486",
+                "reference": "8bafbb06966e2097c041dfa856277225169f5486",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "anton-module",
+            "autoload": {
+                "psr-4": {
+                    "Anton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Martz",
+                    "email": "anton@jmartz.gmbh",
+                    "homepage": "https://www.jmartz.de/"
+                }
+            ],
+            "description": "Anton Collector",
+            "time": "2020-03-25T21:00:01+00:00"
+        },
+        {
+            "name": "jmartz-gmbh/anton-config",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmartz-gmbh/anton-config.git",
+                "reference": "21ca52f039fef1f5a4a237a861d683cb035dafad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-config/zipball/21ca52f039fef1f5a4a237a861d683cb035dafad",
+                "reference": "21ca52f039fef1f5a4a237a861d683cb035dafad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "anton-module",
+            "autoload": {
+                "psr-4": {
+                    "Anton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Martz",
+                    "email": "anton@jmartz.gmbh",
+                    "homepage": "https://www.jmartz.de/"
+                }
+            ],
+            "description": "Anton Config",
+            "time": "2020-03-25T20:56:37+00:00"
+        },
+        {
+            "name": "jmartz-gmbh/anton-jobber",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmartz-gmbh/anton-jobber.git",
+                "reference": "b5d7e65bfa4adbce3f06778616dda035b6b57cc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-jobber/zipball/b5d7e65bfa4adbce3f06778616dda035b6b57cc0",
+                "reference": "b5d7e65bfa4adbce3f06778616dda035b6b57cc0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "anton-module",
+            "autoload": {
+                "psr-4": {
+                    "Anton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Martz",
+                    "email": "anton@jmartz.gmbh",
+                    "homepage": "https://www.jmartz.de/"
+                }
+            ],
+            "description": "Anton Jobber",
+            "time": "2020-03-25T20:59:37+00:00"
+        },
+        {
+            "name": "jmartz-gmbh/anton-log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmartz-gmbh/anton-log.git",
+                "reference": "ee32869c7d1e4ed241bdfe8f26b935ade52a9c9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-log/zipball/ee32869c7d1e4ed241bdfe8f26b935ade52a9c9e",
+                "reference": "ee32869c7d1e4ed241bdfe8f26b935ade52a9c9e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "anton-module",
+            "autoload": {
+                "psr-4": {
+                    "Anton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Martz",
+                    "email": "anton@jmartz.gmbh",
+                    "homepage": "https://www.jmartz.de/"
+                }
+            ],
+            "description": "Anton Log",
+            "time": "2020-03-25T20:59:16+00:00"
+        },
+        {
+            "name": "jmartz-gmbh/anton-validator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmartz-gmbh/anton-validator.git",
+                "reference": "26eb95e98f4b8ae51067ff51792c3609d053dece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-validator/zipball/26eb95e98f4b8ae51067ff51792c3609d053dece",
+                "reference": "26eb95e98f4b8ae51067ff51792c3609d053dece",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "anton-module",
+            "autoload": {
+                "psr-4": {
+                    "Anton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Martz",
+                    "email": "anton@jmartz.gmbh",
+                    "homepage": "https://www.jmartz.de/"
+                }
+            ],
+            "description": "Anton Validator",
+            "time": "2020-03-25T20:58:55+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "jmartz-gmbh/anton-build": 20,
+        "jmartz-gmbh/anton-collector": 20,
+        "jmartz-gmbh/anton-config": 20,
+        "jmartz-gmbh/anton-jobber": 20,
+        "jmartz-gmbh/anton-log": 20,
+        "jmartz-gmbh/anton-validator": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "ext-json": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

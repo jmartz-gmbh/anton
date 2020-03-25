@@ -9,6 +9,12 @@
         "homepage": "https://www.jmartz.de/"
     }],
     "require": {
+        "jmartz-gmbh/anton-build": "dev-master",
+        "jmartz-gmbh/anton-collector": "dev-master",
+        "jmartz-gmbh/anton-config": "dev-master",
+        "jmartz-gmbh/anton-jobber": "dev-master",
+        "jmartz-gmbh/anton-log": "dev-master",
+        "jmartz-gmbh/anton-validator": "dev-master",
         "ext-json": "*"
     }
 }
