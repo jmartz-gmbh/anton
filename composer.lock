@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-build.git",
-                "reference": "64c823a44d9d0109ee473e334343411a4740f109"
+                "reference": "3a750d093c0c01b5968c82b424cc43bafd2b1b07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/64c823a44d9d0109ee473e334343411a4740f109",
-                "reference": "64c823a44d9d0109ee473e334343411a4740f109",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/3a750d093c0c01b5968c82b424cc43bafd2b1b07",
+                "reference": "3a750d093c0c01b5968c82b424cc43bafd2b1b07",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Anton Build",
-            "time": "2020-03-25T20:54:05+00:00"
+            "time": "2020-03-25T21:07:55+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-collector",
@@ -49,12 +49,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-collector.git",
-                "reference": "8bafbb06966e2097c041dfa856277225169f5486"
+                "reference": "563928a837151d0bd58705a8c70969b1cab971cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-collector/zipball/8bafbb06966e2097c041dfa856277225169f5486",
-                "reference": "8bafbb06966e2097c041dfa856277225169f5486",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-collector/zipball/563928a837151d0bd58705a8c70969b1cab971cc",
+                "reference": "563928a837151d0bd58705a8c70969b1cab971cc",
                 "shasum": ""
             },
             "require": {
@@ -78,7 +78,7 @@
                 }
             ],
             "description": "Anton Collector",
-            "time": "2020-03-25T21:00:01+00:00"
+            "time": "2020-03-25T21:08:33+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-config",
