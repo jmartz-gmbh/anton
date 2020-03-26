@@ -21,6 +21,16 @@ Now your ready to go.
 ./anton.sh
 ```
 
+Add workspace/projects.json
+```
+{
+    "ms-tracking": {
+        "name": "Ms Tracking",
+        "repo": "git@github.com:jmartz-gmbh/ms-tracking.git"
+    }
+}
+```
+
 ##### Todo
 * log errors and result in a build history
 * move stuff into phar file
