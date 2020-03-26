@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-build.git",
-                "reference": "3a750d093c0c01b5968c82b424cc43bafd2b1b07"
+                "reference": "49115bbfe7bc36212c7f5121b9787122729eeac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/3a750d093c0c01b5968c82b424cc43bafd2b1b07",
-                "reference": "3a750d093c0c01b5968c82b424cc43bafd2b1b07",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/49115bbfe7bc36212c7f5121b9787122729eeac4",
+                "reference": "49115bbfe7bc36212c7f5121b9787122729eeac4",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Anton Build",
-            "time": "2020-03-25T21:07:55+00:00"
+            "time": "2020-03-25T22:58:19+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-collector",
@@ -197,12 +197,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-validator.git",
-                "reference": "26eb95e98f4b8ae51067ff51792c3609d053dece"
+                "reference": "cc296b11057e518e5deaa733d3fd0093452fd82e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-validator/zipball/26eb95e98f4b8ae51067ff51792c3609d053dece",
-                "reference": "26eb95e98f4b8ae51067ff51792c3609d053dece",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-validator/zipball/cc296b11057e518e5deaa733d3fd0093452fd82e",
+                "reference": "cc296b11057e518e5deaa733d3fd0093452fd82e",
                 "shasum": ""
             },
             "require": {
@@ -226,7 +226,7 @@
                 }
             ],
             "description": "Anton Validator",
-            "time": "2020-03-25T20:58:55+00:00"
+            "time": "2020-03-25T22:46:26+00:00"
         }
     ],
     "packages-dev": [],
