@@ -7,6 +7,10 @@
         "name": "Ms Lighthouse",
         "repo": "git@github.com:jmartz-gmbh/ms-lighthouse.git"
     },
+    "worker-lighthouse": {
+        "name": "Worker Lighthouse",
+        "repo": "git@github.com:jmartz-gmbh/worker-lighthouse.git"
+    },
     "ms-webhint": {
         "name": "Ms Webhint",
         "repo": "git@github.com:jmartz-gmbh/ms-webhint.git"
