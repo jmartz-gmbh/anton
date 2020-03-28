@@ -1,7 +1,7 @@
 version: 1
 update_configs:
   - package_manager: "php:composer"
-    directory: "/src"
+    directory: "/"
     update_schedule: "live"
     automerged_updates:
       - match:
