@@ -2,5 +2,17 @@
     "ms-tracking": {
         "name": "Ms Tracking",
         "repo": "git@github.com:jmartz-gmbh/ms-tracking.git"
+    },
+    "ms-lighthouse": {
+        "name": "Ms Lighthouse",
+        "repo": "git@github.com:jmartz-gmbh/ms-lighthouse.git"
+    },
+    "ms-webhint": {
+        "name": "Ms Webhint",
+        "repo": "git@github.com:jmartz-gmbh/ms-webhint.git"
+    },
+    "pwa-boilerplate": {
+        "name": "Pwa Boilerplate",
+        "repo": "git@github.com:jmartz-gmbh/pwa-boilerplate.git"
     }
 }
