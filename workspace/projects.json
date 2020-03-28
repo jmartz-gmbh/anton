@@ -11,6 +11,14 @@
         "name": "Worker Lighthouse",
         "repo": "git@github.com:jmartz-gmbh/worker-lighthouse.git"
     },
+    "bp-toyota": {
+        "name": "BP Toyota",
+        "repo": "git@github.com:jmartz-gmbh/bp-toyota.git"
+    },
+    "bp-lighthouse": {
+        "name": "BP Lighthouse",
+        "repo": "git@github.com:jmartz-gmbh/bp-lighthouse.git"
+    },
     "ms-webhint": {
         "name": "Ms Webhint",
         "repo": "git@github.com:jmartz-gmbh/ms-webhint.git"
