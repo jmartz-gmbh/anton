@@ -3,6 +3,14 @@
         "name": "Ms Tracking",
         "repo": "git@github.com:jmartz-gmbh/ms-tracking.git"
     },
+    "ms-learning": {
+        "name": "Ms Learning",
+        "repo": "git@github.com:jmartz-gmbh/ms-learning.git"
+    },
+    "ms-status": {
+        "name": "Ms Status",
+        "repo": "git@github.com:jmartz-gmbh/ms-status.git"
+    },
     "ms-lighthouse": {
         "name": "Ms Lighthouse",
         "repo": "git@github.com:jmartz-gmbh/ms-lighthouse.git"
