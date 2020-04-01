@@ -31,13 +31,6 @@ Add workspace/projects.json
 }
 ```
 
-##### Cronjobs
-* add cronjob to clean workspace
-* add cronjob to collect projects (lock file for running builds)
-
-##### Todo
-* log errors and result in a build history
-* move stuff into phar file
 ##### Backend
 * notify (email, slack, webhook)
 * trigger build via github webhook on push
