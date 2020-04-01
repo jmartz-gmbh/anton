@@ -38,10 +38,6 @@ Add workspace/projects.json
 ##### Todo
 * log errors and result in a build history
 * move stuff into phar file
-
-##### Bugs
-* collect doesnt update repo?
-
 ##### Backend
 * notify (email, slack, webhook)
 * trigger build via github webhook on push
