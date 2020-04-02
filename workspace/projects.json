@@ -30,9 +30,5 @@
     "ms-webhint": {
         "name": "Ms Webhint",
         "repo": "git@github.com:jmartz-gmbh/ms-webhint.git"
-    },
-    "pwa-boilerplate": {
-        "name": "Pwa Boilerplate",
-        "repo": "git@github.com:jmartz-gmbh/pwa-boilerplate.git"
     }
 }
