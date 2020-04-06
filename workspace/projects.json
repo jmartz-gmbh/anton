@@ -3,6 +3,10 @@
         "name": "Ms Tracking",
         "repo": "git@github.com:jmartz-gmbh/ms-tracking.git"
     },
+    "nova-pm": {
+        "name": "Ms Tracking",
+        "repo": "git@github.com:jmartz-gmbh/nova-pm.git"
+    },
     "ms-learning": {
         "name": "Ms Learning",
         "repo": "git@github.com:jmartz-gmbh/ms-learning.git"
