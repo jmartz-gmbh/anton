@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-build.git",
-                "reference": "58a022c202f89d51d5cbc6ab3577e446dfbe9f17"
+                "reference": "3365c8cc509ed8a56694b3a74bbed444b470775f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/58a022c202f89d51d5cbc6ab3577e446dfbe9f17",
-                "reference": "58a022c202f89d51d5cbc6ab3577e446dfbe9f17",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/3365c8cc509ed8a56694b3a74bbed444b470775f",
+                "reference": "3365c8cc509ed8a56694b3a74bbed444b470775f",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Anton Build",
-            "time": "2020-03-28T10:31:28+00:00"
+            "time": "2020-04-06T17:52:11+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-collector",
@@ -160,12 +160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-log.git",
-                "reference": "ee32869c7d1e4ed241bdfe8f26b935ade52a9c9e"
+                "reference": "fba88357f73f2564db1f5730aee6479caac3bde1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-log/zipball/ee32869c7d1e4ed241bdfe8f26b935ade52a9c9e",
-                "reference": "ee32869c7d1e4ed241bdfe8f26b935ade52a9c9e",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-log/zipball/fba88357f73f2564db1f5730aee6479caac3bde1",
+                "reference": "fba88357f73f2564db1f5730aee6479caac3bde1",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +189,7 @@
                 }
             ],
             "description": "Anton Log",
-            "time": "2020-03-25T20:59:16+00:00"
+            "time": "2020-04-06T18:04:47+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-validator",
