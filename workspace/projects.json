@@ -31,6 +31,10 @@
         "name": "BP Lighthouse",
         "repo": "git@github.com:jmartz-gmbh/bp-lighthouse.git"
     },
+    "bp-homepage": {
+        "name": "BP Homepage",
+        "repo": "git@github.com:jmartz-gmbh/bp-homepage.git"
+    },
     "ms-webhint": {
         "name": "Ms Webhint",
         "repo": "git@github.com:jmartz-gmbh/ms-webhint.git"
