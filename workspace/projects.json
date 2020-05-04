@@ -4,8 +4,12 @@
         "repo": "git@github.com:jmartz-gmbh/ms-tracking.git"
     },
     "nova-pm": {
-        "name": "Ms Tracking",
+        "name": "PM Nova",
         "repo": "git@github.com:jmartz-gmbh/nova-pm.git"
+    },
+    "nova-customer": {
+        "name": "Customer Nova",
+        "repo": "git@github.com:jmartz-gmbh/nova-customer.git"
     },
     "ms-learning": {
         "name": "Ms Learning",
@@ -38,5 +42,9 @@
     "ms-webhint": {
         "name": "Ms Webhint",
         "repo": "git@github.com:jmartz-gmbh/ms-webhint.git"
+    },
+    "ws-tracking": {
+        "name": "Ws Tracking",
+        "repo": "git@github.com:jmartz-gmbh/ws-tracking.git"
     }
 }
