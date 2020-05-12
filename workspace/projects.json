@@ -11,6 +11,10 @@
         "name": "Customer Nova",
         "repo": "git@github.com:jmartz-gmbh/nova-customer.git"
     },
+    "ms-customer": {
+        "name": "Ms Customer",
+        "repo": "git@github.com:jmartz-gmbh/ms-customer.git"
+    },
     "ms-learning": {
         "name": "Ms Learning",
         "repo": "git@github.com:jmartz-gmbh/ms-learning.git"
@@ -46,5 +50,9 @@
     "ws-tracking": {
         "name": "Ws Tracking",
         "repo": "git@github.com:jmartz-gmbh/ws-tracking.git"
+    },
+    "server-manager": {
+        "name": "Server Manager",
+        "repo": "git@github.com:jmartz-gmbh/server-manager.git"
     }
 }
