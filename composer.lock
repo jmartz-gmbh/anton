@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-build.git",
-                "reference": "3365c8cc509ed8a56694b3a74bbed444b470775f"
+                "reference": "9683ee31909250ee3526e383ec0549b8c6a284e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/3365c8cc509ed8a56694b3a74bbed444b470775f",
-                "reference": "3365c8cc509ed8a56694b3a74bbed444b470775f",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/9683ee31909250ee3526e383ec0549b8c6a284e2",
+                "reference": "9683ee31909250ee3526e383ec0549b8c6a284e2",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Anton Build",
-            "time": "2020-04-06T17:52:11+00:00"
+            "time": "2020-05-14T14:28:08+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-collector",
@@ -123,12 +123,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-jobber.git",
-                "reference": "b5d7e65bfa4adbce3f06778616dda035b6b57cc0"
+                "reference": "9c5ff53a955bb5b253d5808f3586aa3010a34348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-jobber/zipball/b5d7e65bfa4adbce3f06778616dda035b6b57cc0",
-                "reference": "b5d7e65bfa4adbce3f06778616dda035b6b57cc0",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-jobber/zipball/9c5ff53a955bb5b253d5808f3586aa3010a34348",
+                "reference": "9c5ff53a955bb5b253d5808f3586aa3010a34348",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +152,7 @@
                 }
             ],
             "description": "Anton Jobber",
-            "time": "2020-03-25T20:59:37+00:00"
+            "time": "2020-05-12T22:08:39+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-log",
