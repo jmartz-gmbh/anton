@@ -1,0 +1,6 @@
+{
+    "server-manager": {
+        "name": "Server Manager",
+        "repo": "git@github.com:jmartz-gmbh/server-manager.git"
+    }        
+}
