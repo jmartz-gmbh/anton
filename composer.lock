@@ -12,17 +12,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-build.git",
-                "reference": "47bbf2d000d85f96e9cb823c61da09e3fdc7d807"
+                "reference": "fe5c91673a91ea2e742575e4d35a234425ba14d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/47bbf2d000d85f96e9cb823c61da09e3fdc7d807",
-                "reference": "47bbf2d000d85f96e9cb823c61da09e3fdc7d807",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/fe5c91673a91ea2e742575e4d35a234425ba14d7",
+                "reference": "fe5c91673a91ea2e742575e4d35a234425ba14d7",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
+            "default-branch": true,
             "type": "anton-module",
             "autoload": {
                 "psr-4": {
@@ -41,7 +42,11 @@
                 }
             ],
             "description": "Anton Build",
-            "time": "2020-06-14T15:54:04+00:00"
+            "support": {
+                "issues": "https://github.com/jmartz-gmbh/anton-build/issues",
+                "source": "https://github.com/jmartz-gmbh/anton-build/tree/master"
+            },
+            "time": "2021-09-17T16:21:32+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-collector",
@@ -49,17 +54,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-collector.git",
-                "reference": "4b2ff0b610d52c17a5974552cec6a51536933b37"
+                "reference": "9a9831decfd7041a6aa726c22e7f5b4037b92132"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-collector/zipball/4b2ff0b610d52c17a5974552cec6a51536933b37",
-                "reference": "4b2ff0b610d52c17a5974552cec6a51536933b37",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-collector/zipball/9a9831decfd7041a6aa726c22e7f5b4037b92132",
+                "reference": "9a9831decfd7041a6aa726c22e7f5b4037b92132",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
+            "default-branch": true,
             "type": "anton-module",
             "autoload": {
                 "psr-4": {
@@ -78,7 +84,11 @@
                 }
             ],
             "description": "Anton Collector",
-            "time": "2020-05-14T14:30:11+00:00"
+            "support": {
+                "issues": "https://github.com/jmartz-gmbh/anton-collector/issues",
+                "source": "https://github.com/jmartz-gmbh/anton-collector/tree/master"
+            },
+            "time": "2021-06-19T17:02:37+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-config",
@@ -86,17 +96,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-config.git",
-                "reference": "70f0e2ff46cc362710312977285022093f1ae9d5"
+                "reference": "e071df30cc22387990b41c1acc157587b0c9b1fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-config/zipball/70f0e2ff46cc362710312977285022093f1ae9d5",
-                "reference": "70f0e2ff46cc362710312977285022093f1ae9d5",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-config/zipball/e071df30cc22387990b41c1acc157587b0c9b1fd",
+                "reference": "e071df30cc22387990b41c1acc157587b0c9b1fd",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
+            "default-branch": true,
             "type": "anton-module",
             "autoload": {
                 "psr-4": {
@@ -115,7 +126,11 @@
                 }
             ],
             "description": "Anton Config",
-            "time": "2020-03-26T23:29:34+00:00"
+            "support": {
+                "issues": "https://github.com/jmartz-gmbh/anton-config/issues",
+                "source": "https://github.com/jmartz-gmbh/anton-config/tree/master"
+            },
+            "time": "2021-06-19T17:01:46+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-jobber",
@@ -123,17 +138,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-jobber.git",
-                "reference": "9c5ff53a955bb5b253d5808f3586aa3010a34348"
+                "reference": "0b83a31fc13175332a182bb5a1db581992fd7857"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-jobber/zipball/9c5ff53a955bb5b253d5808f3586aa3010a34348",
-                "reference": "9c5ff53a955bb5b253d5808f3586aa3010a34348",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-jobber/zipball/0b83a31fc13175332a182bb5a1db581992fd7857",
+                "reference": "0b83a31fc13175332a182bb5a1db581992fd7857",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
+            "default-branch": true,
             "type": "anton-module",
             "autoload": {
                 "psr-4": {
@@ -152,7 +168,11 @@
                 }
             ],
             "description": "Anton Jobber",
-            "time": "2020-05-12T22:08:39+00:00"
+            "support": {
+                "issues": "https://github.com/jmartz-gmbh/anton-jobber/issues",
+                "source": "https://github.com/jmartz-gmbh/anton-jobber/tree/master"
+            },
+            "time": "2021-06-19T17:05:48+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-log",
@@ -160,17 +180,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-log.git",
-                "reference": "fba88357f73f2564db1f5730aee6479caac3bde1"
+                "reference": "e8841f96cbabd28259beb9be198d5e8fbdf61c4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-log/zipball/fba88357f73f2564db1f5730aee6479caac3bde1",
-                "reference": "fba88357f73f2564db1f5730aee6479caac3bde1",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-log/zipball/e8841f96cbabd28259beb9be198d5e8fbdf61c4a",
+                "reference": "e8841f96cbabd28259beb9be198d5e8fbdf61c4a",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
+            "default-branch": true,
             "type": "anton-module",
             "autoload": {
                 "psr-4": {
@@ -189,7 +210,11 @@
                 }
             ],
             "description": "Anton Log",
-            "time": "2020-04-06T18:04:47+00:00"
+            "support": {
+                "issues": "https://github.com/jmartz-gmbh/anton-log/issues",
+                "source": "https://github.com/jmartz-gmbh/anton-log/tree/master"
+            },
+            "time": "2021-06-19T17:01:49+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-validator",
@@ -197,17 +222,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-validator.git",
-                "reference": "cc296b11057e518e5deaa733d3fd0093452fd82e"
+                "reference": "c3aeb3548bd8c6b3fbc98394c3a59402f02ce4e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-validator/zipball/cc296b11057e518e5deaa733d3fd0093452fd82e",
-                "reference": "cc296b11057e518e5deaa733d3fd0093452fd82e",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-validator/zipball/c3aeb3548bd8c6b3fbc98394c3a59402f02ce4e6",
+                "reference": "c3aeb3548bd8c6b3fbc98394c3a59402f02ce4e6",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
+            "default-branch": true,
             "type": "anton-module",
             "autoload": {
                 "psr-4": {
@@ -226,7 +252,11 @@
                 }
             ],
             "description": "Anton Validator",
-            "time": "2020-03-25T22:46:26+00:00"
+            "support": {
+                "issues": "https://github.com/jmartz-gmbh/anton-validator/issues",
+                "source": "https://github.com/jmartz-gmbh/anton-validator/tree/master"
+            },
+            "time": "2021-06-19T17:02:34+00:00"
         }
     ],
     "packages-dev": [],
@@ -246,5 +276,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
