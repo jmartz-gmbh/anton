@@ -46,6 +46,7 @@
                 "issues": "https://github.com/jmartz-gmbh/anton-build/issues",
                 "source": "https://github.com/jmartz-gmbh/anton-build/tree/master"
             },
+
             "time": "2021-09-17T16:21:32+00:00"
         },
         {
@@ -276,5 +277,7 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+
+    "plugin-api-version": "2.1.0"
+
 }

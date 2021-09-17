@@ -16,6 +16,12 @@ If you need to work from outside of your company buiding, use a vpn to access th
 composer install
 ```
 
+```
+robo
+composer
+php-cli
+```
+
 Now your ready to go.
 ```
 ./anton.sh
