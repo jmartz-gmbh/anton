@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmartz-gmbh/anton-build.git",
-                "reference": "fe5c91673a91ea2e742575e4d35a234425ba14d7"
+                "reference": "1fab9037fccbde63e81fba7e076c728c7071aa18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/fe5c91673a91ea2e742575e4d35a234425ba14d7",
-                "reference": "fe5c91673a91ea2e742575e4d35a234425ba14d7",
+                "url": "https://api.github.com/repos/jmartz-gmbh/anton-build/zipball/1fab9037fccbde63e81fba7e076c728c7071aa18",
+                "reference": "1fab9037fccbde63e81fba7e076c728c7071aa18",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "issues": "https://github.com/jmartz-gmbh/anton-build/issues",
                 "source": "https://github.com/jmartz-gmbh/anton-build/tree/master"
             },
-            "time": "2021-09-17T16:21:32+00:00"
+            "time": "2022-01-29T21:22:37+00:00"
         },
         {
             "name": "jmartz-gmbh/anton-collector",
